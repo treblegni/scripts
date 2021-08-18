@@ -15,7 +15,7 @@ if (process.env.NODE_ENV !== 'production') {
     await page.waitForSelector('button.btn-primary');
     await page.click('button.btn-primary');
     await page.waitForSelector('div.success');
-    await page.goto('https://www.bestbuy.com/cart');
+    await page.goto(process.env.BB_CART);
     await page.waitForSelector('button.btn-primary');
     await page.click('button.btn-primary');
     await page.waitForSelector('input[type="email"]');
