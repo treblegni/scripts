@@ -40,9 +40,7 @@ if (process.env.NODE_ENV !== 'production') {
           await page.click('button[type="submit"]');
         }
       }
-      // await page.waitForNavigation();
-      // await page.waitForTimeout(1000);
-      await page.waitForSelector('input#add-to-cart-button',{timeout: 1000});
+      await page.waitForSelector('input#add-to-cart-button',{timeout: 2000});
       await page.click('input#add-to-cart-button');
       const insurance = await page.$('input[aria-labelledby="attachSiNoCoverage-announce"]');
       if (insurance) {
